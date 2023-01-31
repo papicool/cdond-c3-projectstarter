@@ -72,16 +72,6 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-build
-
-  test-frontend:
-    docker:
-      # Docker image here
-      - image: circleci/node:13.8.0
-    steps:
-      - checkout
-      # Checkout code from git
-      # Restore from cache
-      # Your job code here
 workflows:
   default:
     jobs:
