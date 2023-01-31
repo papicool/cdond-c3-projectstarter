@@ -88,6 +88,7 @@ jobs:
           command: |
              # Your code here
               pwd
+              ll
               cd ~/project/frontend
               npm install
               npm run test
@@ -106,6 +107,7 @@ jobs:
           command: |
              # Your code here
               pwd
+              ll
               cd ~/project/backend
               npm install
               npm run test
