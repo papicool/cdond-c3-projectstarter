@@ -48,6 +48,7 @@ jobs:
           name: Build front-end
           command: |
             # Your code here
+            pwd
             cd frontend
             npm install
             npm run build
@@ -66,6 +67,7 @@ jobs:
           name: Back-end build
           command: |
              # Your code here
+              pwd
               cd backend
               npm install
               npm run build
@@ -85,6 +87,7 @@ jobs:
           name: frontend build
           command: |
              # Your code here
+              pwd
               cd frontend
               npm install
               npm run test
@@ -102,6 +105,7 @@ jobs:
           name: backend build
           command: |
              # Your code here
+              pwd
               cd backend
               npm install
               npm run test
