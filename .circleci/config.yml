@@ -218,10 +218,6 @@ jobs:
           fingerprints: ["28:25:f5:d0:be:a7:03:1d:76:96:dd:02:f7:73:8d:06"]
       - attach_workspace:
           at: ~/
-      - run:
-          name: Install tar and gzip
-          command: |
-            yum install -y tar gzip
       - install_awscli
       - install_ansible
       - run:
