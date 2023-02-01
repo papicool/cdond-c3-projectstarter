@@ -1,0 +1,34 @@
+---
+- name: "Update apt packages."
+  become: true
+  apt:
+    update_cache: yes
+
+- name: "Upgrade packages"
+  become: true
+  apt:
+    upgrade: yes
+
+
+- name: Remove dependencies that are no longer required
+  become: true
+  apt:
+    autoremove: yes
+
+- name: "Install Node.js lts version"
+  shell: |
+    # Install Node.js LTS version as our base Node.js version
+    curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+
+    # Use n version manager to switch to Node.js v13.8.0
+    sudo npm install -g n
+    sudo n 13.8.0
+
+- name: "Install pm2"
+  become: true
+  npm:
+    name: pm2
+    global: yes
+    production: yes
+    state: present
