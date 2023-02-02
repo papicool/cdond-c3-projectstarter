@@ -1,0 +1,21 @@
+---
+- name: "Create backend app directory"
+  file:
+    path: ~/app
+    state: directory
+
+- name: "Unarchive app"
+  unarchive:
+    src: artifact.tar.gz
+    dest: ~/app
+
+- name: "Install dependencies"
+  shell: |
+    cd ~/app
+    npm i
+
+- name: "Start the app"
+  shell: |
+    cd ~/app/dist
+    pm2 stop default
+    pm2 start main.js
