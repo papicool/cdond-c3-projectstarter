@@ -1,2 +1,3 @@
-[URL01] https://github.com/udacity/cdond-c3-projectstarter
-[URL02] http://udapeople-27c18c9.s3-website-us-east-1.amazonaws.com
+[URL01_SCREENSHOT] https://github.com/udacity/cdond-c3-projectstarter
+[URL02_SCREENSHOT] http://udapeople-27c18c9.s3-website-us-east-1.amazonaws.com
+[URL03_SCREENSHOT]
