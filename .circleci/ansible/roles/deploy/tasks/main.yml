@@ -6,7 +6,7 @@
 
 - name: "Unarchive app"
   unarchive:
-    src: backend/artifact.tar.gz
+    src: ~/project/.circleci/ansible/roles/deploy/files/artifact.tar.gz
     dest: ~/app
 
 - name: "Install dependencies"
