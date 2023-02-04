@@ -207,6 +207,7 @@ jobs:
       - destroy-environment:
           WORKFLOW_ID: ${CIRCLE_WORKFLOW_ID:0:7}
 
+
   configure-infrastructure:
     docker:
       - image: cimg/python:3.10
