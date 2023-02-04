@@ -26,7 +26,7 @@ commands:
           name: Revert migrations
           when: on_fail
           command: |
-            SUCCESS=$(curl --insecure https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/migration_<< parameters.WORKFLOW_ID >>)
+            SUCCESS=$(curl --insecure https://kvdb.io/WJBw5eJ2kNSwv6keLYLP74/migration_<< parameters.WORKFLOW_ID >>)
             echo $SUCCESS
             if(( $SUCCESS==1 )); 
             then
@@ -248,7 +248,7 @@ jobs:
           command: |   
               if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
               then
-                  curl --insecure https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
+                  curl --insecure https://kvdb.io/WJBw5eJ2kNSwv6keLYLP74/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
               fi
       - destroy-environment:
           WORKFLOW_ID: ${CIRCLE_WORKFLOW_ID:0:7}
@@ -392,7 +392,7 @@ jobs:
             echo $WORKFLOW_ID >> ~/BlueWorkflowId.txt
             echo $WORKFLOW_ID
             cat ~/BlueWorkflowId.txt
-            curl https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/blue_workflow_id -d "${WORKFLOW_ID}"
+            curl https://kvdb.io/WJBw5eJ2kNSwv6keLYLP74/blue_workflow_id -d "${WORKFLOW_ID}"
       - run:
           name: Update cloudfront distribution
           command: |
@@ -417,7 +417,7 @@ jobs:
         - run:
             name: Delete old stack
             command: |
-              export OldWorkflowID=$(curl --insecure https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/blue_workflow_id)
+              export OldWorkflowID=$(curl --insecure https://kvdb.io/WJBw5eJ2kNSwv6keLYLP74/blue_workflow_id)
               echo OldWorkflowID: "${OldWorkflowID}"
               export STACKS=($(aws cloudformation list-stacks --query "StackSummaries[*].StackName" \
                 --stack-status-filter CREATE_COMPLETE --no-paginate --output text))
