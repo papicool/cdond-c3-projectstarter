@@ -392,7 +392,7 @@ jobs:
             echo $WORKFLOW_ID >> ~/BlueWorkflowId.txt
             echo $WORKFLOW_ID
             cat ~/BlueWorkflowId.txt
-            curl https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/blue_workflow_id -d "${WORKFLOW_ID}"
+            curl https://kvdb.io/5jFkVzWZG6pY6cdQ5FkDg4/blue_workflow_id -d 277582246103
       - run:
           name: Update cloudfront distribution
           command: |
