@@ -1,3 +1,4 @@
-[URL01_SCREENSHOT] https://github.com/udacity/cdond-c3-projectstarter
-[URL02_SCREENSHOT] http://udapeople-27c18c9.s3-website-us-east-1.amazonaws.com
-[URL03_SCREENSHOT]
+[URL01_SCREENSHOT] https://github.com/papicool/cdond-c3-projectstarter
+[URL02_SCREENSHOT] http://udapeople-afe73bb.s3-website-us-east-1.amazonaws.com/#/employees
+[URL03_SCREENSHOT] http://d2ah7v0qwc7rwd.cloudfront.net/
+[URL05_SCREENSHOT] http://ec2-18-207-139-138.compute-1.amazonaws.com:9090/targets
